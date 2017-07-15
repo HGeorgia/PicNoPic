@@ -1,0 +1,92 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    tools:context="com.shubhamwaghe.picnopic.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/background"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/main_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_take"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:layout_toLeftOf="@+id/button_upload"
+                android:layout_toStartOf="@+id/button_upload"
+                android:layout_weight="0.5"
+                android:background="@color/colorAccent"
+                android:text="Take Photo"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/button_choose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/button_take"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:layout_weight="0.5"
+                android:background="@color/colorAccent"
+                android:text="@string/browse_image"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/main_buttons"
+            android:id="@+id/image_wrapper"
+
+            android:layout_height="wrap_content">
+
+
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_alignParentTop="true"
+                android:adjustViewBounds="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/selected_image"
+                android:src="@drawable/dummy" />
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/upload_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorAccent"
+                android:text="@string/upload"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</FrameLayout>
