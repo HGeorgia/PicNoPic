@@ -1,6 +1,6 @@
 <?php
 /*!!! IMPORTANT !!!
-Put your own <CLARIFAI_API_KEY> correctly*/
+Put your own <CLARIFAI_API_KEY> and <HOSTNAME> correctly*/
 
 
 // Path to move uploaded files
@@ -25,7 +25,7 @@ if (isset($_FILES['image']['name'])) {
             ));
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS,
-                        '{"inputs": [{"data": {"image": {"url": "http://54.149.29.68/AndroidUploadImage/uploads/image.jpg"}}}]}');
+                        '{"inputs": [{"data": {"image": {"url": "http://<HOSTNAME>/AndroidUploadImage/uploads/image.jpg"}}}]}');
 
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
